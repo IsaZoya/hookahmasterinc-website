@@ -35,6 +35,7 @@
     </a>
     <nav>
       <a href="#flavors">Flavors</a>
+      <a href="#drinks">Drinks</a>
       <a href="#gallery">Gallery</a>
       <a href="#visit">Visit</a>
       <a class="reserve" href="tel:12096666660">Call</a>
@@ -69,6 +70,24 @@
         <div class="flavor-track" id="flavorTrack"></div>
       </div>
       <div class="swipe-hint">← swipe with finger →</div>
+    </section>
+
+    <section class="prices section" id="prices">
+      <p class="eyebrow">Prices & Policy</p>
+      <h2>Hookah Policy</h2>
+      <div class="price-grid">
+        <div class="price-card"><span>1 Hookah</span><strong>Up to 2 people</strong></div>
+        <div class="price-card"><span>Extra Person</span><strong>+$10</strong></div>
+        <div class="price-card"><span>Maximum</span><strong>3 people per hookah</strong></div>
+      </div>
+      <p class="price-note">Update base hookah and drink prices in <code>/v3/script.js</code> when you are ready to publish exact prices.</p>
+    </section>
+
+    <section class="drinks section" id="drinks">
+      <p class="eyebrow">Hot Drinks</p>
+      <h2>Tea, Chai & Coffee</h2>
+      <p class="section-lead">Hot drinks are listed separately from hookah flavors.</p>
+      <div class="drink-grid" id="drinkGrid"></div>
     </section>
 
     <section class="hookah-stage section">
@@ -112,6 +131,11 @@
       </div>
     </section>
   </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImage" alt="Expanded gallery image" />
+  </div>
 
   <footer>
     <p>© <span id="year"></span> Hookah Master Lounge & Cafe</p>

@@ -6,9 +6,30 @@ const brands = {
   "Darkside":["Bergmonster","Basil Blast","Admiral Akbar","Brazil Breeze","Banana Papa","Bounty Hunter","Blueberry Blast","Crystal Grape","Cyber Kiwi","Cream Soda","Dark Mint","Dark Passion","Deep Blue Sea","Desert Eagle","Dark Ice Cream","Dark Cola","Dark Melon","Lake Grapefruit","Genesis Raspberry","Guava Rebel","Falling Star","Mango Lassi 2.0","Goosebumps","Honey Dust","Killer Milk","Lemon Blast","Pear","Red Jam","Space Jam","Pomelo","Torpedo","Polar Cream","Red Alert","Fruity"],
   "Eternal Smoke":["Eternal Smoke","Lime Lit","Peach Lit","Blueberry Lit","Watermelon Lit","Smoothie Sunshine","Midnight Passion","Aloha Night","Intense Peace"],
   "Adalya":["Love 66","Lady Killer","Punkman","Sheikh Money","Blue Melon"],
-  "Starbuzz":["Bluemist","Safari Melon Dew","Sex on the Beach","Code 69","Orange Mint","Coco Jumbo","Pirates Cave"],
-  "Hot Drinks":["Kadak Chai","Pink Chai","Karak Chai","Black Tea","Green Tea","Mint Tea","Moroccan Mint Tea","Turkish Coffee","Armenian Coffee","Arabic Coffee","Perfect Coffee"]
+  "Starbuzz":["Bluemist","Safari Melon Dew","Sex on the Beach","Code 69","Orange Mint","Coco Jumbo","Pirates Cave"]
 };
+
+
+
+const hotDrinks = [
+  {name:"Kadak Chai", price:"Ask staff"},
+  {name:"Pink Chai", price:"Ask staff"},
+  {name:"Karak Chai", price:"Ask staff"},
+  {name:"Black Tea", price:"Ask staff"},
+  {name:"Green Tea", price:"Ask staff"},
+  {name:"Mint Tea", price:"Ask staff"},
+  {name:"Moroccan Mint Tea", price:"Ask staff"},
+  {name:"Turkish Coffee", price:"Ask staff"},
+  {name:"Armenian Coffee", price:"Ask staff"},
+  {name:"Arabic Coffee", price:"Ask staff"},
+  {name:"Perfect Coffee", price:"Ask staff"}
+];
+
+function renderDrinks(){
+  const grid = document.getElementById('drinkGrid');
+  if(!grid) return;
+  grid.innerHTML = hotDrinks.map(d=>`<article class="drink-card"><h3>${d.name}</h3><p>Hot drink offering</p><span class="drink-price">${d.price}</span></article>`).join('');
+}
 
 const tabs = document.getElementById('brandTabs');
 const track = document.getElementById('flavorTrack');
@@ -18,7 +39,7 @@ let index = 0;
 function score(name, offset){return 45 + ((name.length * 11 + offset) % 50)}
 function renderTabs(){
   tabs.innerHTML = Object.keys(brands).map(b=>`<button class="${b===activeBrand?'active':''}" data-brand="${b}">${b}</button>`).join('');
-  tabs.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{activeBrand=btn.dataset.brand;index=0;renderTabs();renderCards();});
+  tabs.querySelectorAll('button').forEach(btn=>btn.onclick=()=>{activeBrand=btn.dataset.brand;index=0;renderTabs();renderCards();renderDrinks();});
 }
 function renderCards(){
   track.style.transform='translateX(0)';
@@ -29,7 +50,7 @@ function updateSlide(){track.style.transform=`translateX(${-index*100}%)`;}
 let startX=0, dragging=false;
 document.getElementById('swipeWrap').addEventListener('pointerdown',e=>{startX=e.clientX;dragging=true;});
 document.addEventListener('pointerup',e=>{if(!dragging)return; const dx=e.clientX-startX; const max=brands[activeBrand].length-1; if(dx<-45&&index<max)index++; if(dx>45&&index>0)index--; updateSlide(); dragging=false;});
-renderTabs();renderCards();
+renderTabs();renderCards();renderDrinks();
 
 function embers(){
   const field=document.getElementById('emberField');
@@ -38,6 +59,28 @@ function embers(){
 embers();
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Gallery lightbox: click any gallery image to enlarge it with a blurred background.
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightboxImage');
+const lightboxClose = document.getElementById('lightboxClose');
+document.querySelectorAll('.gallery-grid img').forEach(img=>{
+  img.addEventListener('click',()=>{
+    lightboxImage.src = img.src;
+    lightboxImage.alt = img.alt || 'Hookah Master gallery image';
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+  });
+});
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden','true');
+  lightboxImage.src='';
+}
+lightboxClose?.addEventListener('click', closeLightbox);
+lightbox?.addEventListener('click', e=>{ if(e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeLightbox(); });
+
 
 const gate=document.getElementById('ageGate');
 if(localStorage.getItem('hm_age_verified')==='yes'){gate.classList.add('hidden');}
