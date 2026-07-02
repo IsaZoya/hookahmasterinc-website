@@ -1,25 +1,18 @@
-# Hookah Master Website
+Hookah Master V2 test package
 
-Static website for Hookah Master Lounge & Cafe.
+Upload the whole v2 folder to the root of your GitHub repository.
 
-## Files
+Test URL:
+https://hookahmasterinc.com/v2/
 
-- `index.html` - homepage
-- `menu/index.html` - menu page at `/menu/`
-- `gallery/index.html` - gallery page
-- `contact/index.html` - contact page
-- `style.css` - design/theme
-- `script.js` - small footer date script
-- `assets/hero.jpg` - homepage artwork
-- `assets/menu.pdf` - original PDF menu
+This does not replace your current home page.
 
-## Upload to GitHub
-
-1. Open your GitHub repository: `hookahmasterinc-website`.
-2. Delete the old test `index.html` if needed.
-3. Upload all files and folders from this package.
-4. Commit changes.
-5. Wait about 30-60 seconds for Cloudflare Pages to publish.
-
-Main website: https://hookahmasterinc.com
-Menu QR code URL: https://hookahmasterinc.com/menu/
+Files included:
+- v2/index.html
+- v2/style.css
+- v2/script.js
+- v2/assets/hero.jpg
+- v2/assets/hm-logo.png
+- v2/assets/qr-menu.png
+- v2/assets/original-menu.pdf
+- v2/assets/hookah-master-menu-modern.pdf
