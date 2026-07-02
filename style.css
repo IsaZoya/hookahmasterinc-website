@@ -1,35 +1,11 @@
 :root{--bg:#070604;--panel:#11100d;--panel2:#18130d;--gold:#d6a84f;--gold2:#f2d07a;--text:#fff5dc;--muted:#d1bea0;--line:rgba(214,168,79,.35)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top,#2b1c0b 0,#070604 42%,#030302 100%);color:var(--text);font-family:Georgia,'Times New Roman',serif;line-height:1.6}a{color:var(--gold2)}.site-header{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:16px 6vw;background:rgba(3,3,2,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}.brand{font-size:1.35rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--gold2)}nav{display:flex;gap:22px}nav a{text-decoration:none;color:var(--text);font-weight:700}.hero{position:relative;min-height:88vh;display:grid;place-items:center;overflow:hidden}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(1.06) contrast(1.02)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.38),rgba(0,0,0,.72));z-index:1}.hero-card{position:relative;z-index:2;width:min(720px,90vw);margin-right:auto;margin-left:6vw;padding:34px;border:1px solid var(--line);border-radius:24px;background:rgba(8,7,5,.68);box-shadow:0 24px 80px rgba(0,0,0,.6)}h1,h2,h3{line-height:1.1;margin:.2em 0 .4em;color:var(--gold2)}h1{font-size:clamp(2.3rem,6vw,5.4rem);letter-spacing:.05em;text-transform:uppercase}h2{font-size:clamp(1.8rem,3vw,3rem)}.eyebrow{letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}.button{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid var(--gold);border-radius:999px;color:var(--gold2);text-decoration:none;font-weight:800;background:rgba(214,168,79,.08)}.button.primary{background:linear-gradient(135deg,#8a5b19,#f2d07a,#9a671d);color:#160f06;border:0}.section{width:min(1120px,90vw);margin:0 auto;padding:64px 0}.intro{text-align:center}.brand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.brand-grid span,.card,.menu-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(24,19,13,.92),rgba(10,9,7,.92));border-radius:18px;padding:18px;box-shadow:0 18px 55px rgba(0,0,0,.28)}.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}code{display:block;padding:14px;border-radius:12px;background:#050403;border:1px solid var(--line);white-space:normal}.page{padding-top:34px}.page-title{text-align:center}.center-actions{justify-content:center}.policy ul{margin:0;padding-left:22px}.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.menu-card h2{font-size:1.5rem}.menu-card p{color:var(--muted);margin-bottom:0}.menu-card.wide{grid-column:span 3}.pdf-viewer iframe{width:100%;height:760px;border:1px solid var(--line);border-radius:18px;background:#fff}.gallery img{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:0 24px 80px rgba(0,0,0,.55)}footer{text-align:center;padding:36px 6vw;border-top:1px solid var(--line);background:#050403;color:var(--muted)}@media(max-width:850px){.site-header{position:relative;display:block;text-align:center}.brand{display:block;margin-bottom:10px}nav{justify-content:center;gap:14px}.hero{min-height:74vh}.hero-card{margin:22px auto;padding:24px}.brand-grid{grid-template-columns:repeat(2,1fr)}.split,.menu-grid{grid-template-columns:1fr}.menu-card.wide{grid-column:auto}.pdf-viewer iframe{height:520px}}@media(max-width:520px){h1{font-size:2.15rem}.actions,.center-actions{display:grid}.brand-grid{grid-template-columns:1fr}.section{width:min(92vw,1120px);padding:44px 0}.hero img{object-position:center top}}
 /* QR Code Section */
-.qr-section {
-  text-align: center;
-  padding: 70px 20px;
-}
-
 .qr-card {
-  max-width: 520px;
-  margin: 0 auto;
-  padding: 36px 24px;
-  border: 1px solid rgba(212, 175, 55, 0.45);
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(35,25,10,.95), rgba(5,5,5,.95));
-  box-shadow: 0 20px 50px rgba(0,0,0,.45);
-}
-
-.qr-card h2 {
-  margin-top: 0;
-}
-
-.qr-code {
-  width: 230px;
-  max-width: 90%;
-  background: #fff;
-  padding: 14px;
-  border-radius: 14px;
-  margin: 22px auto;
-  display: block;
-  box-shadow: 0 12px 30px rgba(0,0,0,.45);
-}
-
-.qr-card p {
-  color: #d5d5d5;
+    width: min(90%, 500px);
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 40px);
+    border: 1px solid rgba(212,175,55,.45);
+    border-radius: 18px;
+    background: linear-gradient(180deg,#23190a,#050505);
+    box-shadow: 0 20px 50px rgba(0,0,0,.45);
 }
