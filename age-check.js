@@ -11,8 +11,7 @@
     <div class="age-box">
       <h1>Hookah Master</h1>
       <h2>Age Verification</h2>
-      <p>You must be 21 years of age or older to enter this website.</p>
-      <p>Are you 21 or older?</p>
+      <p>Are you 21 years of age or older?</p>
       <div class="age-actions">
         <button id="ageYes">YES</button>
         <button id="ageNo">NO</button>
