@@ -491,15 +491,27 @@ footer{
   box-shadow:0 22px 70px rgba(0,0,0,.4);
 }
 
+/*
+  Flyer previews are intentionally normalized.
+  The source flyers have different pixel sizes, so this container keeps the page
+  balanced without cropping the artwork. The important promo details are repeated
+  as text below each flyer, so mobile users do not need to pinch-zoom.
+*/
 .special-flyer-link{
-  display:block;
-  background:#050403;
+  display:grid;
+  place-items:center;
+  padding:12px;
+  background:radial-gradient(circle at top,rgba(214,168,79,.16),#050403 68%);
 }
 
 .special-flyer-link img{
   display:block;
-  width:100%;
+  width:min(100%,430px);
+  aspect-ratio:4 / 5;
   height:auto;
+  object-fit:contain;
+  border-radius:16px;
+  box-shadow:0 16px 46px rgba(0,0,0,.45);
 }
 
 .special-content{
@@ -531,6 +543,47 @@ footer{
   white-space:nowrap;
 }
 
+@media(max-width:850px){
+  .specials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .special-card{
+    max-width:680px;
+    margin:0 auto;
+  }
+}
+
+@media(max-width:520px){
+  .specials-section{
+    padding-top:42px;
+  }
+
+  .special-flyer-link{
+    padding:8px;
+  }
+
+  .special-flyer-link img{
+    width:100%;
+    max-width:420px;
+  }
+
+  .special-content{
+    padding:16px;
+  }
+
+  .special-list li{
+    display:block;
+  }
+
+  .special-list strong{
+    display:block;
+    margin-top:2px;
+    text-align:left;
+    white-space:normal;
+  }
+}
+
 /* Hot Beverages */
 .beverages-section{
   padding-top:12px;
@@ -552,34 +605,3 @@ footer{
   font-weight:700;
 }
 
-@media(max-width:850px){
-  .specials-grid{
-    grid-template-columns:1fr;
-  }
-
-  .special-card{
-    max-width:680px;
-    margin:0 auto;
-  }
-}
-
-@media(max-width:520px){
-  .specials-section{
-    padding-top:42px;
-  }
-
-  .special-content{
-    padding:16px;
-  }
-
-  .special-list li{
-    display:block;
-  }
-
-  .special-list strong{
-    display:block;
-    margin-top:2px;
-    text-align:left;
-    white-space:normal;
-  }
-}
