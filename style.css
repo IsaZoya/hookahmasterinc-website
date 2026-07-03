@@ -461,3 +461,125 @@ footer{
     grid-template-columns:1fr;
   }
 }
+
+/* Current Specials */
+.section-heading{
+  text-align:center;
+  margin-bottom:28px;
+}
+
+.section-heading p{
+  color:var(--muted);
+}
+
+.specials-section{
+  padding-top:56px;
+}
+
+.specials-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:24px;
+  align-items:start;
+}
+
+.special-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:linear-gradient(180deg,rgba(24,19,13,.96),rgba(8,7,5,.96));
+  box-shadow:0 22px 70px rgba(0,0,0,.4);
+}
+
+.special-flyer-link{
+  display:block;
+  background:#050403;
+}
+
+.special-flyer-link img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.special-content{
+  padding:20px;
+}
+
+.special-content h3{
+  font-size:1.55rem;
+}
+
+.special-list{
+  list-style:none;
+  margin:18px 0 20px;
+  padding:0;
+}
+
+.special-list li{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(214,168,79,.2);
+  color:var(--muted);
+}
+
+.special-list strong{
+  color:var(--gold2);
+  text-align:right;
+  white-space:nowrap;
+}
+
+/* Hot Beverages */
+.beverages-section{
+  padding-top:12px;
+}
+
+.beverage-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:12px;
+}
+
+.beverage-grid span,
+.beverage-card{
+  border:1px solid rgba(214,168,79,.35);
+  border-radius:16px;
+  background:linear-gradient(180deg,rgba(24,19,13,.92),rgba(8,7,5,.92));
+  padding:14px 16px;
+  color:var(--text);
+  font-weight:700;
+}
+
+@media(max-width:850px){
+  .specials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .special-card{
+    max-width:680px;
+    margin:0 auto;
+  }
+}
+
+@media(max-width:520px){
+  .specials-section{
+    padding-top:42px;
+  }
+
+  .special-content{
+    padding:16px;
+  }
+
+  .special-list li{
+    display:block;
+  }
+
+  .special-list strong{
+    display:block;
+    margin-top:2px;
+    text-align:left;
+    white-space:normal;
+  }
+}
