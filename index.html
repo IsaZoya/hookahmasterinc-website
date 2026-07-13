@@ -10,8 +10,8 @@
 </head>
 
 <body>
+  <div class="fire-embers" aria-hidden="true"></div>
 
-<div class="fire-embers" aria-hidden="true"></div>  
   <header class="site-header">
     <a class="brand" href="/">Hookah Master Lounge</a>
     <nav>
@@ -24,7 +24,7 @@
   <main>
     <section class="hero">
       <div class="hero-overlay"></div>
-      <img src="/assets/hero.jpg" alt="Hookah Master Lounge and Cafe premium brands and address" />
+      <img src="/assets/hero.jpg" alt="Hookah Master Lounge and Cafe" />
       <div class="hero-card">
         <p class="eyebrow">San Jose, California</p>
         <h1>Hookah Master Lounge & Cafe</h1>
@@ -36,23 +36,23 @@
       </div>
     </section>
 
-   <section class="section specials-section" id="specials">
-  <div class="section-heading">
-    <p class="eyebrow">Current Specials</p>
-    <h2>Promotions</h2>
-    <p>Tap any flyer to view it full size.</p>
-  </div>
+    <section class="section specials-section" id="specials">
+      <div class="section-heading">
+        <p class="eyebrow">Current Specials</p>
+        <h2>Promotions</h2>
+        <p>Tap any flyer to view it full size.</p>
+      </div>
 
-  <div class="promo-grid">
-    <a class="promo-card" href="assets/promotions/promo1.jpg" target="_blank" rel="noopener">
-      <img src="assets/promotions/promo1.jpg" alt="Hookah Master promotion 1" loading="lazy">
-    </a>
+      <div class="promo-grid">
+        <a class="promo-card" href="/assets/promotions/promo1.jpg" target="_blank" rel="noopener">
+          <img src="/assets/promotions/promo1.jpg" alt="Hookah Master promotion 1" loading="lazy" decoding="async">
+        </a>
 
-    <a class="promo-card" href="assets/promotions/promo2.jpg" target="_blank" rel="noopener">
-      <img src="assets/promotions/promo2.jpg" alt="Hookah Master promotion 2" loading="lazy">
-    </a>
-  </div>
-</section>
+        <a class="promo-card" href="/assets/promotions/promo2.jpg" target="_blank" rel="noopener">
+          <img src="/assets/promotions/promo2.jpg" alt="Hookah Master promotion 2" loading="lazy" decoding="async">
+        </a>
+      </div>
+    </section>
 
     <section class="section qr-section">
       <div class="qr-card">
@@ -62,6 +62,16 @@
         <p>No app required. Works with iPhone & Android.</p>
         <a class="button primary" href="/menu/">View Menu</a>
       </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading">
+        <p class="eyebrow">Gallery</p>
+        <h2>Photos</h2>
+        <p>Tap any photo to view it full size.</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
     </section>
 
     <section class="section intro">
@@ -330,7 +340,6 @@
       </div>
     </section>
 
-
     <section class="split section">
       <div>
         <p class="eyebrow">Visit Us</p>
@@ -361,18 +370,6 @@
 
   <script src="/script.js"></script>
   <script src="/age-check.js"></script>
-  <script src="gallery.js"></script>
+  <script src="/gallery.js"></script>
 </body>
 </html>
-
-
-
-<section class="section gallery-section" id="gallery">
-  <div class="section-heading">
-    <p class="eyebrow">Gallery</p>
-    <h2>Photos</h2>
-    <p>Tap any photo to view it full size.</p>
-  </div>
-
-  <div class="gallery-grid" id="galleryGrid"></div>
-</section>
